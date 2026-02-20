@@ -67,7 +67,7 @@ export default function Contact() {
               {[
                 { href: "https://github.com/kalepraveenraj", icon: <FaGithub /> },
                 { href: "https://linkedin.com/in/kale-praveen-raj-7b2178130", icon: <FaLinkedin /> },
-                { href: "https://www.youtube.com/@kalepraveenraj6536", icon: <FaYoutube /> },
+                { href: "https://www.youtube.com/@kalepraveenraj", icon: <FaYoutube /> },
                 { href: "https://www.instagram.com/praveen_raj_kale_1729/", icon: <FaInstagram /> },
                 { href: "https://www.facebook.com/praveen.raj.135388/", icon: <FaFacebook /> },
                 { href: "https://twitter.com/kalepraveenraj", icon: <FaTwitter /> },
