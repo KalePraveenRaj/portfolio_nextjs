@@ -4,6 +4,9 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/portfolio_nextjs" : "";
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -38,7 +41,7 @@ export default function Header() {
         >
           <div className="relative w-10 h-10 rounded-full overflow-hidden border border-white/20 transition-all duration-300 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.6)]">
             <Image
-              src="/logo1.svg"
+              src={`${basePath}/logo1.svg`}
               alt="Logo"
               fill
               sizes="40px"
@@ -47,7 +50,6 @@ export default function Header() {
             />
           </div>
 
-          {/* Changed Font Style */}
           <span className="text-xl font-semibold tracking-wide text-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:via-purple-500 group-hover:to-pink-500 group-hover:bg-clip-text group-hover:text-transparent">
             Kale Praveen Raj
           </span>
