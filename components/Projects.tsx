@@ -135,7 +135,7 @@ function ProjectCard({
           {description}
         </p>
 
-        <div className="flex justify-center gap-10 text-2xl text-gray-400">
+        <div className="flex justify-center gap-96 text-2xl text-gray-400">
           {github && (
             <a
               href={github}
