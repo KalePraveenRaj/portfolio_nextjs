@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/portfolio_nextjs" : "";
+
 export default function About() {
   return (
     <section
@@ -13,7 +16,7 @@ export default function About() {
         {/* Profile Image */}
         <div className="relative w-40 h-40 mb-8 rounded-full overflow-hidden border-4 border-white/30 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(34,211,238,0.4)]">
           <Image
-            src="/profile.jpg"
+            src={`${basePath}/profile.jpg`}
             alt="Kale Praveen Raj"
             fill
             sizes="160px"
@@ -27,14 +30,14 @@ export default function About() {
 
           <p>
             I'm a passionate Full Stack Developer with a strong background in software development and a keen interest in
-            creating responsive, accessible, and high-performance applications. 
-            I specialize in Java, SQL, and desktop and web application development, 
-            with a strong focus on optimizing user experiences and integrating 
+            creating responsive, accessible, and high-performance applications.
+            I specialize in Java, SQL, and desktop and web application development,
+            with a strong focus on optimizing user experiences and integrating
             modern technologies like blockchain.
           </p>
 
           <p>
-            My goal is to build efficient, scalable software while continuously 
+            My goal is to build efficient, scalable software while continuously
             exploring innovative technologies to push the boundaries of modern applications.
           </p>
 
@@ -42,7 +45,7 @@ export default function About() {
 
         {/* Resume Button */}
         <a
-          href="/resume.pdf"
+          href={`${basePath}/resume.pdf`}
           download
           className="mt-10 px-8 py-3 bg-cyan-500 text-black font-semibold rounded-lg transition-all duration-300 hover:bg-cyan-400 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(34,211,238,0.45)]"
         >
