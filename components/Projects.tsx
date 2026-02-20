@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/portfolio_nextjs" : "";
+
 export default function Projects() {
   const projects = [
     {
@@ -106,7 +109,6 @@ function ProjectCard({
   return (
     <div className="group relative rounded-2xl transition-all duration-300 hover:-translate-y-2">
 
-      {/* Gradient Shadow */}
       <div
         className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
@@ -115,11 +117,10 @@ function ProjectCard({
         }}
       />
 
-      {/* Card */}
       <div className="relative bg-[rgba(0,0,0,0.35)] rounded-2xl p-6 shadow-lg group-hover:shadow-none">
 
         <Image
-          src={image}
+          src={`${basePath}${image}`}
           alt={title}
           width={800}
           height={500}
@@ -134,7 +135,7 @@ function ProjectCard({
           {description}
         </p>
 
-        <div className="flex justify-center gap-96 text-2xl text-gray-400">
+        <div className="flex justify-center gap-10 text-2xl text-gray-400">
           {github && (
             <a
               href={github}
