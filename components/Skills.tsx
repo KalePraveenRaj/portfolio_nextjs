@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/portfolio_nextjs" : "";
+
 export default function Skills() {
   const skills = [
     { name: "Java", icon: "/skills/java.svg" },
@@ -47,17 +50,15 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <div key={index} className="group relative">
 
-              {/* Gradient Shadow */}
               <div
                 className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 style={gradientShadow}
               />
 
-              {/* Card */}
               <div className="relative flex flex-col items-center justify-center gap-3 bg-[rgba(0,0,0,0.35)] rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
 
                 <Image
-                  src={skill.icon}
+                  src={`${basePath}${skill.icon}`}
                   alt={skill.name}
                   width={48}
                   height={48}
