@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/portfolio_nextjs" : "";
+
 export const metadata: Metadata = {
   title: {
     default: "Kale Praveen Raj | Full Stack Developer",
@@ -13,20 +16,20 @@ export const metadata: Metadata = {
     "Kale Praveen Raj - Full Stack Developer specializing in modern web technologies and scalable applications.",
 
   icons: {
-    icon: "/logo2.png",
-    shortcut: "/logo2.png",
-    apple: "/logo2.png",
+    icon: `${basePath}/logo2.png`,
+    shortcut: `${basePath}/logo2.png`,
+    apple: `${basePath}/logo2.png`,
   },
 
   openGraph: {
     title: "Kale Praveen Raj | Full Stack Developer",
     description:
       "Full Stack Developer creating scalable, high-performance applications.",
-    url: "https://yourdomain.com", // update after deployment
+    url: "https://kalepraveenraj.github.io/portfolio_nextjs",
     siteName: "Kale Praveen Raj Portfolio",
     images: [
       {
-        url: "/logo2.png",
+        url: `${basePath}/logo2.png`,
         width: 800,
         height: 600,
         alt: "Kale Praveen Raj Portfolio",
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
     title: "Kale Praveen Raj | Full Stack Developer",
     description:
       "Full Stack Developer creating scalable, high-performance applications.",
-    images: ["/logo2.png"],
+    images: [`${basePath}/logo2.png`],
   },
 
   themeColor: "#1b253d",
