@@ -42,6 +42,13 @@ export default function Projects() {
       live: "https://kalepraveenraj.github.io/portfolioreactvite/",
     },
     {
+      image: "/projects/portfolioreact.JPG",
+      title: "Portfolio with NextJS",
+      description: "Built NextJS",
+      github: "https://github.com/KalePraveenRaj/portfolio_nextjs",
+      live: "https://kalepraveenraj.github.io/portfolio_nextjs/",
+    },
+    {
       image: "/projects/todo_app.JPG",
       title: "Todo App (Flutter)",
       description: "Flutter-based todo app inspired by Google Tasks.",
