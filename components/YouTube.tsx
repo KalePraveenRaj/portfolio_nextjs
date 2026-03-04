@@ -19,6 +19,7 @@ export default function YouTube() {
     { id: "6Vo6J1f1kaw", title: "Snakes & Ladders (Flutter)" },
     { id: "huUBZg-rqmo", title: "Expense Tracker (Flutter)" },
     { id: "5o1U6kU53_s", title: "Portfolio with NextJS" },
+    { id: "ttKJOUwQokg", title: "AI ChatBot" },
   ];
 
   return (
