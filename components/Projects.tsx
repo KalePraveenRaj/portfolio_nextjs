@@ -76,6 +76,13 @@ export default function Projects() {
       github: "https://github.com/KalePraveenRaj/expense_tracker",
       live: "https://kalepraveenraj.github.io/portfolioreactvite/",
     },
+    {
+      image: "/projects/restaurent_ChatBot.png",
+      title: "AI ChatBot",
+      description: "Flutter, riverpod and material UI used to built this Restaurant ChatBot",
+      github: "https://github.com/KalePraveenRaj/Avyxon_AI_Labs",
+      live: "https://github.com/KalePraveenRaj/Avyxon_AI_Labs/releases/tag/v1.0.0",
+    },
   ];
 
   return (
